@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  x: 1
+  y: 1
+  points: 1
+  rathaus_id: 1
+  holzfaeller_id: 1
+  miene_id: 1
+  steinbruch_id: 1
+  bauernhof_id: 1
+  user_id: 1
+
+two:
+  name: MyString
+  x: 1
+  y: 1
+  points: 1
+  rathaus_id: 1
+  holzfaeller_id: 1
+  miene_id: 1
+  steinbruch_id: 1
+  bauernhof_id: 1
+  user_id: 1
