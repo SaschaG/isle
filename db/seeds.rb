@@ -5,7 +5,6 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
-
 puts 'SETTING UP EXAMPLE USERS'
 user1 = User.create! :name => 'First User', :email => 'user@test.com', :password => 'please', :password_confirmation => 'please'
 puts 'New user created: ' << user1.name
@@ -26,77 +25,77 @@ user1 = Village.create! :name => 'aghtras', :user_id => 2
 puts 'New user created: ' << user1.name
 
 
-puts 'SETTING UP HOLZFAELLER'
+puts 'SETTING UP Woodhouse'
 
   h1 = 0
-  h1 = Holzfaeller.create! :lvl => 1 , :points => 5 , :rate => 12 
-  puts 'New Holzfaeller created: ' << h1.lvl
+  h1 = Woodhouse.create! :lvl => 1 , :points => 5 , :rate => 12 
+  puts 'New Woodhouse created: ' << h1.lvl
   h1.save
-  h = Holzfaeller.create! :lvl => 2 , :points => 12 , :rate => 18 
-  puts 'New Holzfaeller created: ' << h.lvl
+  h = Woodhouse.create! :lvl => 2 , :points => 12 , :rate => 18 
+  puts 'New Woodhouse created: ' << h.lvl
   h.save
-  h = Holzfaeller.create! :lvl => 3 , :points => 18 , :rate => 24 
-  puts 'New Holzfaeller created: ' << h.lvl
+  h = Woodhouse.create! :lvl => 3 , :points => 18 , :rate => 24 
+  puts 'New Woodhouse created: ' << h.lvl
   h.save
-  h = Holzfaeller.create! :lvl => 4 , :points => 28 , :rate => 32
-  puts 'New Holzfaeller created: ' << h.lvl
+  h = Woodhouse.create! :lvl => 4 , :points => 28 , :rate => 32
+  puts 'New Woodhouse created: ' << h.lvl
   h.save
-  h = Holzfaeller.create! :lvl => 5 , :points => 38 , :rate => 38
-  puts 'New Holzfaeller created: ' << h.lvl
+  h = Woodhouse.create! :lvl => 5 , :points => 38 , :rate => 38
+  puts 'New Woodhouse created: ' << h.lvl
   h.save
   
-  puts 'SETTING UP STEINBRUCH'
+  puts 'SETTING UP Pit'
   h1 = 0
-  h1 = Steinbruch.create! :lvl => 1 , :points => 5 , :rate => 12 
-  puts 'New Steinbruch created: ' << h1.lvl
+  h1 = Pit.create! :lvl => 1 , :points => 5 , :rate => 12 
+  puts 'New Pit created: ' << h1.lvl
   h1.save
-  h = Steinbruch.create! :lvl => 2 , :points => 12 , :rate => 18 
-  puts 'New Steinbruch created: ' << h.lvl
+  h = Pit.create! :lvl => 2 , :points => 12 , :rate => 18 
+  puts 'New Pit created: ' << h.lvl
   h.save
-  h = Steinbruch.create! :lvl => 3 , :points => 18 , :rate => 24 
-  puts 'New Steinbruch created: ' << h.lvl
+  h = Pit.create! :lvl => 3 , :points => 18 , :rate => 24 
+  puts 'New Pit created: ' << h.lvl
   h.save
-  h = Steinbruch.create! :lvl => 4 , :points => 28 , :rate => 32
-  puts 'New Steinbruch created: ' << h.lvl
+  h = Pit.create! :lvl => 4 , :points => 28 , :rate => 32
+  puts 'New Pit created: ' << h.lvl
   h.save
-  h = Steinbruch.create! :lvl => 5 , :points => 38 , :rate => 38
-  puts 'New Steinbruch created: ' << h.lvl
+  h = Pit.create! :lvl => 5 , :points => 38 , :rate => 38
+  puts 'New Pit created: ' << h.lvl
   h.save
   
-  puts 'SETTING UP Miene'
+  puts 'SETTING UP Mine'
 
   h1 = 0
-  h1 = Miene.create! :lvl => 1 , :points => 5 , :rate => 12 
-  puts 'New Miene created: ' << h1.lvl
+  h1 = Mine.create! :lvl => 1 , :points => 5 , :rate => 12 
+  puts 'New Mine created: ' << h1.lvl
   h1.save
-  h = Miene.create! :lvl => 2 , :points => 12 , :rate => 18 
-  puts 'New Miene created: ' << h.lvl
+  h = Mine.create! :lvl => 2 , :points => 12 , :rate => 18 
+  puts 'New Mine created: ' << h.lvl
   h.save
-  h = Miene.create! :lvl => 3 , :points => 18 , :rate => 24 
-  puts 'New Miene created: ' << h.lvl
+  h = Mine.create! :lvl => 3 , :points => 18 , :rate => 24 
+  puts 'New Mine created: ' << h.lvl
   h.save
-  h = Miene.create! :lvl => 4 , :points => 28 , :rate => 32
-  puts 'New Miene created: ' << h.lvl
+  h = Mine.create! :lvl => 4 , :points => 28 , :rate => 32
+  puts 'New Mine created: ' << h.lvl
   h.save
-  h = Miene.create! :lvl => 5 , :points => 38 , :rate => 38
-  puts 'New Miene created: ' << h.lvl
+  h = Mine.create! :lvl => 5 , :points => 38 , :rate => 38
+  puts 'New Mine created: ' << h.lvl
   h.save
   
-  puts 'SETTING UP Rathaus'
+  puts 'SETTING UP Hq'
 
   h1 = 0
-  h1 = Rathaus.create! :lvl => 1 , :points => 5 , :rate => 12 
-  puts 'New Rathaus created: ' << h1.lvl
+  h1 = Hq.create! :lvl => 1 , :points => 5 , :rate => 12 
+  puts 'New Hq created: ' << h1.lvl
   h1.save
-  h = Rathaus.create! :lvl => 2 , :points => 12 , :rate => 18 
-  puts 'New Rathaus created: ' << h.lvl
+  h = Hq.create! :lvl => 2 , :points => 12 , :rate => 18 
+  puts 'New Hq created: ' << h.lvl
   h.save
-  h = Rathaus.create! :lvl => 3 , :points => 18 , :rate => 24 
-  puts 'New Rathaus created: ' << h.lvl
+  h = Hq.create! :lvl => 3 , :points => 18 , :rate => 24 
+  puts 'New Hq created: ' << h.lvl
   h.save
-  h = Rathaus.create! :lvl => 4 , :points => 28 , :rate => 32
-  puts 'New Rathaus created: ' << h.lvl
+  h = Hq.create! :lvl => 4 , :points => 28 , :rate => 32
+  puts 'New Hq created: ' << h.lvl
   h.save
-  h = Rathaus.create! :lvl => 5 , :points => 38 , :rate => 38
-  puts 'New Rathaus created: ' << h.lvl
+  h = Hq.create! :lvl => 5 , :points => 38 , :rate => 38
+  puts 'New Hq created: ' << h.lvl
   h.save

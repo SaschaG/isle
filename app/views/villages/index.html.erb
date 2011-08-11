@@ -1,0 +1,8 @@
+<h1>Deine Dörfer</h1>
+<table>
+<% @villages.each do |village| %>
+  <tr>
+    <td><%= link_to village.name, village %></td>
+  </tr>
+<% end %>
+</table>

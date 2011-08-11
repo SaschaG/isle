@@ -10,9 +10,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110811112852) do
+ActiveRecord::Schema.define(:version => 20110811135033) do
 
-  create_table "holzfaellers", :force => true do |t|
+  create_table "hqs", :force => true do |t|
     t.integer  "lvl"
     t.integer  "points"
     t.integer  "rate"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20110811112852) do
     t.datetime "updated_at"
   end
 
-  create_table "mienes", :force => true do |t|
+  create_table "mines", :force => true do |t|
     t.integer  "lvl"
     t.integer  "points"
     t.integer  "rate"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20110811112852) do
     t.datetime "updated_at"
   end
 
-  create_table "rathaus", :force => true do |t|
+  create_table "pits", :force => true do |t|
     t.integer  "lvl"
     t.integer  "points"
     t.integer  "rate"
@@ -47,14 +47,6 @@ ActiveRecord::Schema.define(:version => 20110811112852) do
 
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
-
-  create_table "steinbruches", :force => true do |t|
-    t.integer  "lvl"
-    t.integer  "points"
-    t.integer  "rate"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -80,12 +72,19 @@ ActiveRecord::Schema.define(:version => 20110811112852) do
     t.integer  "x"
     t.integer  "y"
     t.integer  "points"
-    t.integer  "rathaus_id"
-    t.integer  "holzfaeller_id"
-    t.integer  "miene_id"
-    t.integer  "steinbruch_id"
-    t.integer  "bauernhof_id"
+    t.integer  "hq_id"
+    t.integer  "woodhouse_id"
+    t.integer  "mine_id"
+    t.integer  "pit_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "woodhouses", :force => true do |t|
+    t.integer  "lvl"
+    t.integer  "points"
+    t.integer  "rate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

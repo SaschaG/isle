@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @village.name %>
+</p>
+
+<p>
+  <b>X:</b>
+  <%= @village.x %>
+</p>
+
+<p>
+  <b>Y:</b>
+  <%= @village.y %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @village.points %>
+</p>
+
+<p>
+  <b>Hq:</b>
+  <%= @village.hq_id %>
+</p>
+
+<p>
+  <b>Woodhouse:</b>
+  <%= @village.woodhouse_id %>
+</p>
+
+<p>
+  <b>Mine:</b>
+  <%= @village.mine_id %>
+</p>
+
+<p>
+  <b>Pit:</b>
+  <%= @village.pit_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @village.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_village_path(@village) %> |
+<%= link_to 'Back', villages_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  lvl: 1
+  points: 1
+  rate: 1
+
+two:
+  lvl: 1
+  points: 1
+  rate: 1
