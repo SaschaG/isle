@@ -1,5 +1,11 @@
+<% if Village.where(:user_id => current_user.id).empty? %>
+
 <h1>New village</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', villages_path %>
+<% else %>
+
+Nicht zulässig
+
+<% end %>

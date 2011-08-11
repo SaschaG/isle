@@ -44,8 +44,23 @@ class VillagesController < ApplicationController
 
     respond_to do |format|
       if @village.save
-        format.html { redirect_to(@village, :notice => 'Village was successfully created.') }
-        format.xml  { render :xml => @village, :status => :created, :location => @village }
+        @village.x = rand(100)
+        @village.y = rand(100)
+        if @village.x == Village.where(:x => @village.x) && @village.x == Village.where(:y => @village.y)
+            while @village.x == Village.where(:x => @village.x) && @village.x == Village.where(:y => @village.y)
+              @village.x = rand(100)
+              @village.y = rand(100)
+            end
+        else
+          @village.hq_id = 1
+          @village.woodhouse_id = 1
+          @village.mine_id = 1
+          @village.pit_id = 1
+          @village.user_id = current_user.id
+          @village.save
+          format.html { redirect_to(@village, :notice => 'Village was successfully created.') }
+          format.xml  { render :xml => @village, :status => :created, :location => @village }
+		end      
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @village.errors, :status => :unprocessable_entity }
@@ -57,7 +72,11 @@ class VillagesController < ApplicationController
   # PUT /villages/1.xml
   def update
     @village = Village.find(params[:id])
-
+    @village.points = Hq.where(:id => @village.hq_id).first.points + 
+    				  Woodhouse.where(:id => @village.woodhouse_id).first.points +
+    				  Pit.where(:id => @village.pit_id).first.points +
+    				  Mine.where(:id => @village.mine_id).first.points
+    @village.save
     respond_to do |format|
       if @village.update_attributes(params[:village])
         format.html { redirect_to(@village, :notice => 'Village was successfully updated.') }
@@ -68,6 +87,7 @@ class VillagesController < ApplicationController
       end
     end
   end
+
 
   # DELETE /villages/1
   # DELETE /villages/1.xml
