@@ -46,6 +46,6 @@
 </p>
 
 
-<%= link_to "Click me",  :controller => 'villages', :action => 'post_info' %>
-            
+<%= link_to "Click me", 
+            {:controller => 'villages', :action => 'post_info'} %>  
 <%= link_to 'Update', village_path(@village), :method => :put %> 

@@ -71,12 +71,15 @@ class VillagesController < ApplicationController
   # PUT /villages/1
   # PUT /villages/1.xml
   def update
+  
+    
     @village = Village.find(params[:id])
     @village.points = Hq.where(:id => @village.hq_id).first.points + 
     				  Woodhouse.where(:id => @village.woodhouse_id).first.points +
     				  Pit.where(:id => @village.pit_id).first.points +
     				  Mine.where(:id => @village.mine_id).first.points
     @village.save
+    
     respond_to do |format|
       if @village.update_attributes(params[:village])
         format.html { redirect_to(@village, :notice => 'Village was successfully updated.') }
@@ -99,5 +102,12 @@ class VillagesController < ApplicationController
       format.html { redirect_to(villages_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def post_info
+    @village = Village.find(params[:id])
+    @village.pit_id = @village.pit_id + 1
+    @village.save#
+    redirect_to village_url(@village)
   end
 end
