@@ -1,6 +1,9 @@
 class VillagesController < ApplicationController
   # GET /villages
   # GET /villages.xml
+
+   
+  
   def index
     @villages = Village.where(:user_id => current_user.id)
 

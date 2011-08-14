@@ -18,7 +18,9 @@ body {
  	margin-left: auto;
     margin-right:auto;
     margin-top: 0px;
+    margin-bottom: 0px;
     padding: 10px;
+    padding-bottom: 1px;
     padding-top: 10px;
 	color: #000;
 	width: 800px;
@@ -74,5 +76,9 @@ nav ul li a:hover {
   
 }
 
-
+h6{
+color: #000;
+height: 3px;
+text-align:right ;
+}
 

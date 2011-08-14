@@ -33,6 +33,10 @@ GEM
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     configuration (1.2.0)
+    daemons (1.1.4)
+    delayed_job (2.1.4)
+      activesupport (~> 3.0)
+      daemons
     devise (1.4.2)
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
@@ -91,6 +95,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  delayed_job
   devise (= 1.4.2)
   friendly_id (= 3.2.1.1)
   heroku
